@@ -45,3 +45,7 @@ ENTRYPOINT npm start <br/>
 <br/>})
 <br/>
 <br/>ai pode mudar a porta por comando com -P   ::::::docker run -p 3030:6000 -d cerchiariluiza/app-node:1.2
+
+<h1> limpar </h1>
+[docker image rmi $(docker image ls -aq)
+docker container rmi $(docker images ls -aq) --force
