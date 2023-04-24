@@ -44,4 +44,4 @@ ENTRYPOINT npm start <br/>
 <br/>    console.log("Server is listening on port 3000")
 <br/>})
 <br/>
-<br/>ai pode mudar a porta por comando com -P
+<br/>ai pode mudar a porta por comando com -P   ::::::docker run -p 3030:6000 -d cerchiariluiza/app-node:1.2
