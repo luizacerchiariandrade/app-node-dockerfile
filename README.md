@@ -47,7 +47,7 @@ ENTRYPOINT npm start <br/>
 <br/>ai pode mudar a porta por comando com -P   ::::::docker run -p 3030:6000 -d cerchiariluiza/app-node:1.2
 
 <h1> Parte 4 </h1>
-Fazer app com banco de dados <img src="img.jpg"><hr/>
+Fazer app com banco de dados <a href="https://github.com/luizacerchiariandrade/app-node-dockerfile/blob/main/img.png">Img</a><hr/>
 <br/>criar a rede 
 <br/>docker network create --driver bridge minha-bridge
 <br/>
