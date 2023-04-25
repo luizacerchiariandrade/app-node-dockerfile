@@ -49,3 +49,4 @@ ENTRYPOINT npm start <br/>
 <h1> limpar </h1>
 [docker image rmi $(docker image ls -aq)
 docker container rmi $(docker images ls -aq) --force
+<br> docker run -it -v C:/lu/app:/app ubuntu
