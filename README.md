@@ -60,6 +60,29 @@ Fazer app com banco de dados <a href="https://github.com/luizacerchiariandrade/a
 <br/>sudo docker run -d --network minha-bridge --name alurabooks -p 3000:3000 aluradocker/alura-boo
 ks:1.0
 
+
+<h1> Modo declarativo </h1>
+# sudo docker run -d --network minha-bridge --name alurabooks -p 3000:3000 aluradocker/alura-books:1.0,
+#sudo docker run -d --network minha-bridge --name meu-mongo mongo:4.4.6
+<br>version: "3.9"
+<br>services:
+<br>  mongodb:
+<br>    image: "mongo:4.4.6"
+<br>    container_name: meu-mongo
+<br>    networks: 
+<br>      - compose-bridge
+<br>  alurabooks:
+<br>    image: "aluradocker/alura-books:1.0"
+<br>    container_name: alurabooks
+<br>    networks: 
+<br>      - compose-bridge
+<br>    ports:
+<br>      - 3000:3000
+<br>networks:
+<br>  compose-bridge:
+<br>    driver: bridge
+
+
 <h1> Mais comandos limpar </h1>
 [docker image rmi $(docker image ls -aq)
 docker container rmi $(docker images ls -aq) --force
